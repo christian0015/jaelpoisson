@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poija</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP._uaTbSKybm2bRF8p4SpjhwHaHa?pid=ImgDet&rs=1"
+        type="image/x-icon">
+    <link href="jaelpoisson.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            box-shadow: 0px 5px 5px rgba(233, 233, 233, 0.767);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 10000;
+        }
+
+        #logo {
+            margin-left: 20px;
+            width: 65px;
+            border-radius: 100px;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        #item {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            text-decoration: none;
+            color: rgb(102, 7, 131);
+        }
+
+        #menu-logo {
+            width: 48px;
+            height: 40px;
+            margin-right: 10px; margin-left: 5px;
+            border-radius: 0;
+            display: none;
+        }
+
+        #shopping-logo {
+            width: 50px;
+            height: 50px;
+            margin-left: 100px;
+            border-radius: 100px;
+        }
+
+        main {
+            padding: 50px;
+            padding-top: 100px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+        #img {
+            width: 500px;
+            height: 300px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 50px;
+        }
+
+
+        .text2 {
+            color: rgb(36, 128, 36);
+            font-size: 180%;
+            font-weight: bold;
+            width: 40%;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: rgb(102, 7, 131);
+            font-size: xx-large;
+        }
+
+
+
+        #img-achat {
+            width: 150px;
+            border-radius: 100px;
+            border-color: rgb(8, 110, 76);
+        }
+
+        .nom {
+            color: black;
+            font-weight: bold;
+            font-size: 170%;
+        }
+
+
+
+        .text3 {
+            color: rgb(24, 34, 15);
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+
+        footer {
+            text-align: center;
+            font-size: xx-large;
+            background-color: rgb(9, 109, 109);
+            color: white;
+            padding: 20px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .logoname {
+            color: rgb(102, 7, 131);
+        }
+
+        #logoh {
+            width: 40px;
+            border-radius: 100px;
+        }
+
+        #logof {
+            width: 100px;
+            border-radius: 100px;
+        }
+
+        .copyright {
+            font-size: 50%;
+            color: rgb(202, 202, 202);
+        }
+
+        #shopping {
+            font-size: 170%;
+            padding: 30px;
+            padding-top: 100px;
+            background-color: rgb(4, 99, 102);
+            color: rgb(252, 255, 206);
+        }
+
+        #img44 {
+            width: 250px;
+            height: 200px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 50px;
+
+        }
+
+
+        /*********************** Mobile *************************/
+        @media only screen and (max-width: 700px) {
+            body {
+                font-size: 100%;
+                width: 100%;
+            }
+
+            .textA {
+                font-size: 145%;
+                font-weight: bold;
+                color: rgb(102, 7, 131);
+                display: flex;
+
+            }
+
+            #menu-logo {
+                display: block;
+            }
+
+            #nav {
+                display: none;
+            }
+
+            #nav.open {
+                display: inline;
+                top: 100px;
+                font-size: 200%;
+                position: fixed;
+                padding: 20px;
+                width: 300px;
+                right: 10px;
+                line-height: 130px;
+                background-color: rgb(233, 233, 233);
+                box-shadow: 0px 20px 20px white;
+                border-radius: 20px;
+            }
+
+            #item {
+                display: flex;
+                color: rgb(102, 7, 131);
+            }
+
+            #img {
+                width: 300px;
+                height: 200px;
+            }
+
+            .text2 {
+                font-size: 170%;
+                text-align: start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://st.depositphotos.com/1476179/1606/v/600/depositphotos_16069357-stock-illustration-business-logo-fish.jpg"
+                alt="logo" id="logo">
+        </div>
+        <span class="textA">Jael Poisson</span>
+        <div>
+            <nav id="nav">
+                <a href="#Poissons frais" id="item">Poisson Frais</a>
+                <a href="#Poissons de mer" id="item">Poisson de mer</a>
+                <a href="#Poissons divers" id="item">Poisson divers</a>
+                <a href="#recettes" id="item">Recettes</a>
+            </nav>
+        </div>
+        <div>
+            <a href="index.html"><img src="back.png" alt="" id="shopping-logo"></a>
+        </div>
+        <div>
+            <img src="menu-img.jpg" alt="" id="menu-logo">
+        </div>
+    </header>
+
+    <div id="shopping">
+        <div style="display: inline; justify-content: center;">
+        <span style="font-weight: bold; color: rgb(255, 189, 47);">Faite vos courses en toute sécurité avec Poija.</span>
+        <br><br>
+        <div>_L'excellente qualité de viande </div>
+        <img src="https://assets.afcdn.com/story/20190313/1337886_w6016h4512c1cx4788cy2199cxt2615cyt403cxb6016cyb4016.jpg"
+            alt="" id="img44">
+        <br><br>
+        <div> _Une préparation facile et gout de plus agreable </div>
+        <img src="https://cdn-s-www.leprogres.fr/images/1813A6BB-833A-4C94-8074-3A932D07BC1D/NW_raw/le-poisson-est-riche-en-omega-3-et-permet-donc-de-prevenir-des-maladies-cardiovasculaires-photo-shutterstock-1668542586.jpg"
+            alt="" id="img44">
+        <br><br>
+        <div> _Payement sécurisé avec Paypal</div>
+        <img src="https://www.paypalobjects.com/marketing/web/bdmc/BDMC_new1.png" alt="" id="img44">
+        </div>
+    </div>
+
+    <main>
+
+        <br><br>
+        <div id="space-recettes">
+            <div id="recettes">
+                <h2>Recettes<h2>
+            </div>
+            <img src="https://i.pinimg.com/originals/46/c0/1b/46c01be820876933f99c393556aba20b.jpg" alt="" id="img">
+            <span class="text3">Pour des bons plats suivez la chaine tiktok suivante : bethy Mpenja <a href="
+                                https://www.tiktok.com/@bethychanceuse"><button id="button"> y aller </button>
+                </a></span>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bethychanceuse"
+                data-unique-id="bethychanceuse" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
+                <section> <a target="_blank"
+                        href="https://www.tiktok.com/@bethychanceuse?refer=creator_embed">@bethychanceuse</a>
+                </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+        <br><br><br><br>
+        </div>
+        </article>
+    </main>
+    <footer>
+        <div> Plus sur <span class="logoname">P O I J A</span></div>
+        <img src="https://th.bing.com/th?id=OIF.0%2b4zK5QAZ%2brPXpmrJ%2fDeyA&pid=ImgDet&rs=1" alt="" id="logoh">
+        <img src="https://www.unipile.com/wp-content/uploads/2022/02/logo-whatapp-blanc-vert-telecharger-gratuitement.jpg"
+            alt="" id="logoh">
+        <img src="https://th.bing.com/th/id/OIP.XgT9d552B6R9C60Ul2yqkAHaHa?pid=ImgDet&rs=1" alt="" id="logoh">
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.kMaGY1q_K4FEH4tlppH1WwHaH6?pid=ImgDet&rs=1" alt="" id="logof">
+            <br>
+            <span class="copyright">&copy;2023 Jael Poisson / Kinshasa Bandalungwa </span>
+        </div>
+
+        <br>
+    </footer>
+    <script>
+        //---------------------------------------Button Menu----------------------------------
+        // Récupération des éléments HTML
+        const menuButton = document.getElementById('menu-logo');
+        const menu = document.getElementById('nav');
+
+        // Fonction pour ouvrir le menu
+        function openMenu() {
+            menu.classList.add('open');
+            document.addEventListener('click', closeMenu);
+        }
+
+        // Fonction pour fermer le menu
+        function closeMenu(event) {
+            if (!menu.contains(event.target) && event.target !== menuButton) {
+                menu.classList.remove('open');
+                document.removeEventListener('click', closeMenu);
+            }
+        }
+
+        // Ajout d'un écouteur d'événement pour ouvrir le menu au clic
+        menuButton.addEventListener('click', openMenu);
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

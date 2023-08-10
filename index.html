@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poija</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP._uaTbSKybm2bRF8p4SpjhwHaHa?pid=ImgDet&rs=1"
+        type="image/x-icon">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            box-shadow: 0px 5px 5px rgba(233, 233, 233, 0.767);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 10000;
+        }
+
+        #logo {
+            margin-left: 20px;
+            width: 65px;
+            border-radius: 100px;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        #item {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            text-decoration: none;
+            color: rgb(102, 7, 131);
+        }
+
+        #menu-logo {
+            width: 48px;
+            height: 40px;
+            margin-right: 10px; margin-left: 5px;
+            border-radius: 0;
+            display: none;
+        }
+
+        #shopping-logo {
+            width: 50px;
+            height: 50px;
+            margin-left: 100px;
+            border-radius: 100px;
+        }
+
+        main {
+            padding: 50px;
+            padding-top: 100px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #affiche1,
+        #affiche2 {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding-top: 70px;
+        }
+
+
+        .text1a {
+            font-size: 300%;
+            font-weight: bold;
+            color: rgb(6, 0, 56);
+        }
+
+        .text1b {
+            font-weight: bold;
+            color: rgb(102, 7, 131);
+
+        }
+
+        .text1c {
+            font-size: 130%;
+            color: rgb(23, 13, 80);
+        }
+
+        #img {
+            width: 500px;
+            height: 300px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 50px;
+        }
+
+        #affiche2 {
+            flex-direction: row-reverse;
+        }
+
+        .text2 {
+            color: rgb(36, 128, 36);
+            font-size: 180%;
+            font-weight: bold;
+            width: 40%;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: rgb(102, 7, 131);
+            font-size: xx-large;
+        }
+
+        .list {
+            box-shadow: 0px 10px 10px rgb(202, 202, 202);
+            padding: 15px;
+            max-width: 300px;
+            border-radius: 12px;
+
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #button {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        #button-commander:hover {
+
+            transition: 0.5s;
+            background-color: #31df3a;
+        }
+
+        .sous-section {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        #img-achat {
+            width: 300px;
+            border-radius: 25px;
+            border-color: rgb(8, 110, 76);
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .nom {
+            color: black;
+            font-weight: bold;
+            font-size: 170%;
+        }
+
+        .description {
+            font-size: 130%;
+        }
+
+        .price {
+            color: rgb(65, 92, 39);
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+        #button-commander {
+            width: 135px;
+            height: 40px;
+            font-size: 140%;
+            background-color: rgb(0, 85, 11);
+            color: rgb(255, 255, 255);
+            font-size: 130%;
+
+        }
+
+        #button-commander-number {
+            width: 120px;
+            height: 40px;
+            font-size: 140%;
+        }
+
+        .text3 {
+            color: rgb(24, 34, 15);
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+
+        footer {
+            text-align: center;
+            font-size: xx-large;
+            background-color: rgb(9, 109, 109);
+            color: white;
+            padding: 20px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .logoname {
+            color: rgb(102, 7, 131);
+        }
+
+        #logoh {
+            width: 40px;
+            border-radius: 100px;
+        }
+
+        #logof {
+            width: 100px;
+            border-radius: 100px;
+        }
+
+        .copyright {
+            font-size: 50%;
+            color: rgb(202, 202, 202);
+        }
+
+        /*********************** Mobile *************************/
+        @media only screen and (max-width: 700px) {
+            body {
+                font-size: 100%;
+                width: 100%;
+            }
+
+            .textA {
+                font-size: 145%;
+                font-weight: bold;
+                color: rgb(102, 7, 131);
+                display: flex;
+
+            }
+
+            #menu-logo {
+                display: block;
+            }
+
+            #nav {
+                display: none;
+            }
+
+            #nav.open {
+                display: inline;
+                top: 100px;
+                font-size: 200%;
+                position: fixed;
+                padding: 20px;
+                width: 300px;
+                right: 10px;
+                line-height: 130px;
+                background-color: rgb(233, 233, 233);
+                box-shadow: 0px 20px 20px white;
+                border-radius: 20px;
+            }
+
+            #item {
+                display: flex;
+                color: rgb(102, 7, 131);
+            }
+
+
+
+            #affiche1,
+            #affiche2 {
+                display: inline;
+            }
+
+            #img {
+                width: 300px;
+                height: 200px;
+            }
+
+            .text1c,
+            .text2 {
+                font-size: 170%;
+                text-align: start;
+            }
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://st.depositphotos.com/1476179/1606/v/600/depositphotos_16069357-stock-illustration-business-logo-fish.jpg"
+                alt="logo" id="logo">
+        </div>
+        <span class="textA">Jael Poisson</span>
+        <div>
+            <nav id="nav">
+                <a href="#Poissons frais" id="item">Poisson Frais</a>
+                <a href="#Poissons de mer" id="item">Poisson de mer</a>
+                <a href="#Poissons divers" id="item">Poisson divers</a>
+                <a href="#recettes" id="item">Recettes</a>
+            </nav>
+        </div>
+        <div>
+            <a href="shopping.html"><img src="chopping-img.jpg" alt="" id="shopping-logo"></a>
+        </div>
+        <div>
+            <img src="menu-img.jpg" alt="" id="menu-logo">
+        </div>
+    </header>
+
+    <main>
+
+        <div id="affiche1">
+            <div id="text">
+                <span class=text1a>
+                    Bienvenu chez
+                    <span class="text1b">Jael Poisson</span>
+                </span>
+                <br><br>
+                <span class="text1c">
+                    Cela remonte à quand votre cosommation 100% Bio ? <br>Prendre soin de soi et de ce qu'on
+                    aime n'aura
+                    jamais de limite !
+                </span>
+
+            </div>
+            <img src="img1.jpg" alt="" id="img">
+        </div>
+
+        <br><br><br>
+
+
+        <div id="affiche2">
+
+            <span class="text2">
+
+                Une livraison de qualité. Chez nous votre consommation passe en prioritaire <br>En moins de 24h
+                chronos, satisfait ou remboursé
+
+            </span>
+            <span>
+                <img src="https://th.bing.com/th/id/R.023401ac04c04f5d5b0aed575861d9db?rik=U%2bMoHp%2bFLWfJbw&riu=http%3a%2f%2fwww.repronumerique.com%2f_upload%2ftiny_mce%2fimage%2fgeneral%2flivraison_image.jpg&ehk=sY4hnRkpLV%2fzpSw9zNg7Yjxdb4zQl2HZItuFpWsLxLg%3d&risl=&pid=ImgRaw&r=0"
+                    alt="" id="img"></span>
+        </div>
+        <article>
+            <!--=======================================Poisson frais====================================-->
+            <section>
+                <div data-aos="fade-right">
+                    <h2 id="Poissons frais">Poissons Frais</h2>
+                </div>
+            </section>
+            <div class="cards">
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2021/3/YR/CZ/YS/11862042/chilly-fish.jpeg"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Sole</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://emart.cd/no/wp-content/uploads/2018/06/malwa-emart.cd_.png" alt=""
+                                id="img-achat">
+                            <div>
+                                <div class="nom">Malwa</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://th.bing.com/th/id/R.c6ce96b82c865300426d1809b9509cdd?rik=cbo9jAwH7oZI4A&riu=http%3a%2f%2fwww.studiodes2prairies.com%2fwp-content%2fuploads%2f2016%2f04%2fbar-photo-studio.jpg&ehk=sRmhLDN6pQaxTo5s7KcAsuywH3bQlgSlJcjFCj5F8JE%3d&risl=&pid=ImgRaw&r=0"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Poisson</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+
+
+
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://emart.cd/no/wp-content/uploads/2018/09/capitaine.jpg" alt=""
+                                id="img-achat">
+                            <div>
+                                <div class="nom">Capitaine</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://th.bing.com/th/id/OIP.O5yO_afZLgMJiX4RRP2yJwHaE7?pid=ImgDet&rs=1" alt=""
+                                id="img-achat">
+                            <div>
+                                <div class="nom">Perche</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://th.bing.com/th/id/R.7feb80c271bb063dcacf7b16a50c494f?rik=M%2fJZDvmUVaqlqA&riu=http%3a%2f%2fwww.hatchmag.com%2fsites%2fdefault%2ffiles%2fstyles%2fextra-large%2fpublic%2ffield%2fimage%2fcuda-1.jpg&ehk=tPp14r7nNaTXiJ4OQ6WOjd9ovmtqPg55ee%2b0yaBpx9g%3d&risl=&pid=ImgRaw&r=0"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Barracuda</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://chezdissela.com/wp-content/uploads/2017/06/Red-Dorade-Fish-.jpg" alt=""
+                                id="img-achat">
+                            <div>
+                                <div class="nom">Mabundu</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://previews.123rf.com/images/augusthalem/augusthalem1702/augusthalem170200041/71251772-poisson-tilapia-frais-sur-glace-en-vente-au-march%C3%A9-du-frais.jpg"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Tilapia</div>
+                                <div class="description">Poisson de mer</div>
+                                <div class="price"> 17 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <section>
+                <div data-aos="fade-right">
+                    <h2 id="Poisson de mer">Poissons de mer</h2>
+                </div>
+            </section>
+
+            <div class="cards">
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://www.enjoynordjylland.dk/sites/enjoynordjylland.com/files/styles/tile_big/public/2021-03/hummere_visitdenmark.JPG?h=65190c8b&itok=DuubFNK_"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Langouste</div>
+                                <div class="description">Langouste entiere</div>
+                                <div class="price"> 35 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://morinmaree.com/wp-content/uploads/2020/11/crevettes-bio-poissonnerie-albi-scaled.jpg"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Crevette</div>
+                                <div class="description">Crevette entiere</div>
+                                <div class="price"> 30 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="list">
+                    <div>
+                        <div class="sous-section" data-aos="flip-left">
+                            <img src="https://us.123rf.com/450wm/peair/peair1505/peair150500042/40088594-gros-plan-de-crabes-cuits-%C3%A0-la-vapeur-nourriture-crabes-d%C3%A9licieux.jpg?ver=6"
+                                alt="" id="img-achat">
+                            <div>
+                                <div class="nom">Crabe</div>
+                                <div class="description">Crabe rouge</div>
+                                <div class="price"> 30 000 FC par Kg</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="button">
+                            <a
+                                href="https://wa.me/212713088840?text=Je suis intéressé par votre produit, je souhaite passer une commande">
+                                <button id="button-commander" data-aos="flip-up">Commander</button></a>
+
+                            <input type="number" name="" id="button-commander-number" placeholder="nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br><br><br>
+                <div id="space-recettes">
+                    <div id="recettes">
+                        <h2>Recettes<h2>
+                    </div>
+                    <img src="https://i.pinimg.com/originals/46/c0/1b/46c01be820876933f99c393556aba20b.jpg" alt=""
+                        id="img">
+                    <span class="text3">Pour des bons plats suivez la chaine tiktok suivante : bethy Mpenja <a href="
+                                https://www.tiktok.com/@bethychanceuse"><button id="button"> y aller </button>
+                        </a></span>
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bethychanceuse"
+                        data-unique-id="bethychanceuse" data-embed-type="creator"
+                        style="max-width: 780px; min-width: 288px;">
+                        <section> <a target="_blank"
+                                href="https://www.tiktok.com/@bethychanceuse?refer=creator_embed">@bethychanceuse</a>
+                        </section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+                <br><br><br><br>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div> Plus sur <span class="logoname">P O I J A</span></div>
+        <img src="https://th.bing.com/th?id=OIF.0%2b4zK5QAZ%2brPXpmrJ%2fDeyA&pid=ImgDet&rs=1" alt="" id="logoh">
+        <img src="https://www.unipile.com/wp-content/uploads/2022/02/logo-whatapp-blanc-vert-telecharger-gratuitement.jpg"
+            alt="" id="logoh">
+        <img src="https://th.bing.com/th/id/OIP.XgT9d552B6R9C60Ul2yqkAHaHa?pid=ImgDet&rs=1" alt="" id="logoh">
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.kMaGY1q_K4FEH4tlppH1WwHaH6?pid=ImgDet&rs=1" alt="" id="logof">
+            <br>
+            <span class="copyright">&copy;2023 Jael Poisson / Kinshasa Bandalungwa </span>
+        </div>
+
+        <br>
+    </footer>
+    <script>
+        //---------------------------------------Button Menu----------------------------------
+        // Récupération des éléments HTML
+        const menuButton = document.getElementById('menu-logo');
+        const menu = document.getElementById('nav');
+
+        // Fonction pour ouvrir le menu
+        function openMenu() {
+            menu.classList.add('open');
+            document.addEventListener('click', closeMenu);
+        }
+
+        // Fonction pour fermer le menu
+        function closeMenu(event) {
+            if (!menu.contains(event.target) && event.target !== menuButton) {
+                menu.classList.remove('open');
+                document.removeEventListener('click', closeMenu);
+            }
+        }
+
+        // Ajout d'un écouteur d'événement pour ouvrir le menu au clic
+        menuButton.addEventListener('click', openMenu);
+    </script>
+
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
